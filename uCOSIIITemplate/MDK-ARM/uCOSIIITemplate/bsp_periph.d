@@ -1,0 +1,12 @@
+ucosiiitemplate\bsp_periph.o: ..\Src\BSP\bsp_periph.c
+ucosiiitemplate\bsp_periph.o: ..\Src\BSP\bsp.h
+ucosiiitemplate\bsp_periph.o: ..\Src\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
+ucosiiitemplate\bsp_periph.o: ..\Src\uC-CPU\cpu_def.h
+ucosiiitemplate\bsp_periph.o: ..\Src\cpu_cfg.h
+ucosiiitemplate\bsp_periph.o: ..\Src\uC-CPU\cpu_core.h
+ucosiiitemplate\bsp_periph.o: ..\Src\uC-LIB\lib_def.h
+ucosiiitemplate\bsp_periph.o: ..\Src\uC-LIB\lib_mem.h
+ucosiiitemplate\bsp_periph.o: ..\Src\uC-CPU\cpu_core.h
+ucosiiitemplate\bsp_periph.o: ..\Src\lib_cfg.h
+ucosiiitemplate\bsp_periph.o: ..\Src\uC-LIB\lib_str.h
+ucosiiitemplate\bsp_periph.o: ..\Src\uC-LIB\lib_ascii.h

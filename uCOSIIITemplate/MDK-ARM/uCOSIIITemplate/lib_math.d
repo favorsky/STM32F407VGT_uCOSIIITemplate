@@ -1,0 +1,12 @@
+ucosiiitemplate\lib_math.o: ..\Src\uC-LIB\lib_math.c
+ucosiiitemplate\lib_math.o: ..\Src\uC-LIB\lib_math.h
+ucosiiitemplate\lib_math.o: ..\Src\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
+ucosiiitemplate\lib_math.o: ..\Src\uC-CPU\cpu_def.h
+ucosiiitemplate\lib_math.o: ..\Src\cpu_cfg.h
+ucosiiitemplate\lib_math.o: ..\Src\uC-CPU\cpu_core.h
+ucosiiitemplate\lib_math.o: ..\Src\uC-LIB\lib_def.h
+ucosiiitemplate\lib_math.o: ..\Src\uC-LIB\lib_mem.h
+ucosiiitemplate\lib_math.o: ..\Src\uC-CPU\cpu_core.h
+ucosiiitemplate\lib_math.o: ..\Src\lib_cfg.h
+ucosiiitemplate\lib_math.o: ..\Src\uC-LIB\lib_str.h
+ucosiiitemplate\lib_math.o: ..\Src\uC-LIB\lib_ascii.h

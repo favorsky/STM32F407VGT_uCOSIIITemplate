@@ -1,0 +1,16 @@
+ucosiiitemplate\apps.o: ..\Src\APPs\APPs.c
+ucosiiitemplate\apps.o: ..\Src\APPs\APPs.h
+ucosiiitemplate\apps.o: ..\Src\uCOS-III\Source\os.h
+ucosiiitemplate\apps.o: ..\Src\os_cfg.h
+ucosiiitemplate\apps.o: ..\Src\uC-CPU\cpu_core.h
+ucosiiitemplate\apps.o: ..\Src\uC-CPU\ARM-Cortex-M4\RealView\cpu.h
+ucosiiitemplate\apps.o: ..\Src\uC-CPU\cpu_def.h
+ucosiiitemplate\apps.o: ..\Src\cpu_cfg.h
+ucosiiitemplate\apps.o: ..\Src\uC-LIB\lib_def.h
+ucosiiitemplate\apps.o: ..\Src\uC-LIB\lib_mem.h
+ucosiiitemplate\apps.o: ..\Src\uC-CPU\cpu_core.h
+ucosiiitemplate\apps.o: ..\Src\lib_cfg.h
+ucosiiitemplate\apps.o: ..\Src\uC-LIB\lib_str.h
+ucosiiitemplate\apps.o: ..\Src\uC-LIB\lib_ascii.h
+ucosiiitemplate\apps.o: ..\Src\uCOS-III\Source\os_type.h
+ucosiiitemplate\apps.o: ..\Src\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h
