@@ -42,4 +42,5 @@ ucosiiitemplate\os_app_hooks.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ha
 ucosiiitemplate\os_app_hooks.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 ucosiiitemplate\os_app_hooks.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 ucosiiitemplate\os_app_hooks.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ucosiiitemplate\os_app_hooks.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 ucosiiitemplate\os_app_hooks.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h

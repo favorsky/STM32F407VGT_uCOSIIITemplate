@@ -38,6 +38,7 @@ ucosiiitemplate\bsp_button.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_
 ucosiiitemplate\bsp_button.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
 ucosiiitemplate\bsp_button.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 ucosiiitemplate\bsp_button.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
+ucosiiitemplate\bsp_button.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h
 ucosiiitemplate\bsp_button.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
 ucosiiitemplate\bsp_button.o: ..\Src\uCOS-III\Source\os.h
 ucosiiitemplate\bsp_button.o: ..\Src\os_cfg.h

@@ -60,7 +60,7 @@
 #define  APP_CFG_TASK_LED3_PRIO                 5u
 #define  APP_CFG_TASK_LED4_PRIO                 6u
 #define  APP_CFG_TASK_UART_PRIO                 7u
-#define  APP_CFG_TASK_SERVER_PRIO               OS_CFG_PRIO_MAX - 2;
+#define  APP_CFG_TASK_SERVER_PRIO               8u
 
 
 

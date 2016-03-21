@@ -32,6 +32,7 @@
   */
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+#include "spi.h"
 #include "usart.h"
 #include "gpio.h"
 
@@ -113,6 +114,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_USART3_UART_Init();
+  MX_SPI1_Init();
 
   /* USER CODE BEGIN 2 */
   Mem_Init();  
