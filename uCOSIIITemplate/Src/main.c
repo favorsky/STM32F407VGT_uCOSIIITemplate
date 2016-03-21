@@ -62,15 +62,6 @@ static  CPU_STK      AppTaskStartStk[APP_CFG_TASK_START_STK_SIZE];
         OS_TCB       AppTaskLed1TCB;
 static  CPU_STK      AppTaskLed1Stk[APP_CFG_TASK_LED1_STK_SIZE];
 
-static  OS_TCB       AppTaskLed2TCB;
-static  CPU_STK      AppTaskLed2Stk[APP_CFG_TASK_LED2_STK_SIZE];
-
-static  OS_TCB       AppTaskLed3TCB;
-static  CPU_STK      AppTaskLed3Stk[APP_CFG_TASK_LED3_STK_SIZE];
-
-static  OS_TCB       AppTaskLed4TCB;
-static  CPU_STK      AppTaskLed4Stk[APP_CFG_TASK_LED4_STK_SIZE];
-
 static  OS_TCB       AppTaskUARTTCB;
 static  CPU_STK      AppTaskUARTStk[APP_CFG_TASK_UART_STK_SIZE];
 
@@ -95,9 +86,6 @@ static  void  AppTaskCreate(void);
 static  void  AppObjCreate (void);
 
 static  void  AppTaskLed1(void);
-static  void  AppTaskLed2(void);
-static  void  AppTaskLed3(void);
-static  void  AppTaskLed4(void);
 static  void  AppTaskUARTSend(void * p_arg);
 static  void  AppTaskServer(void *p_arg);
 
@@ -247,7 +235,6 @@ static  void  AppTaskStart (void *p_arg)
 #endif
     AppTaskCreate();                                            /* Create Application tasks                             */
     AppObjCreate();
-    BSP_LED_On(0u);
 		
 		OSTaskDel((OS_TCB * )0,&err);
 
@@ -288,47 +275,6 @@ static  void  AppTaskCreate (void)
                  (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
                  &os_err);
 	
-//		OSTaskCreate(&AppTaskLed2TCB,                               /* Create Led2 task                                */
-//                  "App Task Led2",
-//                  (OS_TASK_PTR)AppTaskLed2,
-//                  0u,
-//                  APP_CFG_TASK_LED2_PRIO,
-//                 &AppTaskLed2Stk[0u],
-//                  AppTaskLed2Stk[APP_CFG_TASK_LED2_STK_SIZE / 10u],
-//                  APP_CFG_TASK_LED2_STK_SIZE,
-//                  0u,
-//                  0u,
-//                  0u,
-//                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
-//                 &os_err);
-//								 
-//	  OSTaskCreate(&AppTaskLed3TCB,                               /* Create Led3 task                                */
-//                  "App Task Led3",
-//                  (OS_TASK_PTR)AppTaskLed3,
-//                  0u,
-//                  APP_CFG_TASK_LED3_PRIO,
-//                 &AppTaskLed3Stk[0u],
-//                  AppTaskLed3Stk[APP_CFG_TASK_LED3_STK_SIZE / 10u],
-//                  APP_CFG_TASK_LED3_STK_SIZE,
-//                  0u,
-//                  0u,
-//                  0u,
-//                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
-//                 &os_err);
-//								 
-//	  OSTaskCreate(&AppTaskLed4TCB,                               /* Create Led3 task                                */
-//                  "App Task Led4",
-//                  (OS_TASK_PTR)AppTaskLed4,
-//                  0u,
-//                  APP_CFG_TASK_LED4_PRIO,
-//                 &AppTaskLed4Stk[0u],
-//                  AppTaskLed4Stk[APP_CFG_TASK_LED4_STK_SIZE / 10u],
-//                  APP_CFG_TASK_LED4_STK_SIZE,
-//                  0u,
-//                  0u,
-//                  0u,
-//                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
-//                 &os_err);
 								 
 		OSTaskCreate(&AppTaskUARTTCB,
 								 "App Task UART",
@@ -348,7 +294,7 @@ static  void  AppTaskCreate (void)
 								"App Task Server",
 								(OS_TASK_PTR)AppTaskServer,
 								0u,
-								APP_CFG_TASK_UART_PRIO,
+								APP_CFG_TASK_SERVER_PRIO,
 								&AppTaskServerStk[0u],
 								AppTaskServerStk[APP_CFG_TASK_SERVER_STK_SIZE / 10u],
 								APP_CFG_TASK_SERVER_STK_SIZE,
@@ -404,103 +350,16 @@ static  void  AppObjCreate (void)
 static void AppTaskLed1(void)
 {
 	OS_ERR os_err;
-	CPU_TS ts;
 	while(DEF_TRUE)
 	{
 		BSP_LED_Toggle(1u);
 		OSTimeDlyHMSM(0u, 0u, 0u, 50u,
                   OS_OPT_TIME_HMSM_STRICT,
                   &os_err);
-//		OSTaskSemPend(0,
-//									OS_OPT_PEND_BLOCKING,
-//									&ts,
-//									&os_err);
 	}
 }
 
-/*
-*********************************************************************************************************
-*                                          AppTaskLed2()
-*
-* Description : Test uC/OS-III objects.
-*
-* Argument(s) : p_arg is the argument passed to 'AppTaskObj1' by 'OSTaskCreate()'.
-*
-* Return(s)   : none
-*
-* Caller(s)   : This is a task
-*
-* Note(s)     : none.
-*********************************************************************************************************
-*/
-//static void AppTaskLed2(void)
-//{
-//	OS_ERR os_err;
-//	while(DEF_TRUE)
-//	{
-//		BSP_LED_Toggle(2u);
-//		OSTimeDlyHMSM(0u, 0u, 0u, 100u,
-//                  OS_OPT_TIME_HMSM_STRICT,
-//                  &os_err);
-//	}
-//}
 
-
-/*
-*********************************************************************************************************
-*                                             AppTaskLed3()
-*
-* Description : This task finds the root of the following equation.
-*               f(x) =  e^-x(3.2 sin(x) - 0.5 cos(x)) using the bisection mehtod
-*
-* Argument(s) : p_arg   is the argument passed to 'AppTaskEq0Fp' by 'OSTaskCreate()'.
-*
-* Return(s)   : none.
-*
-* Note(s)     : 1) Atollic TrueSTUDIO needs special settings to output floating point format; however,
-*                  IAR and KeilMDK should work properly.
-*********************************************************************************************************
-*/
-//static void AppTaskLed3(void)
-//{
-//	OS_ERR os_err;
-//	while(DEF_TRUE)
-//	{
-//		BSP_LED_Toggle(3u);
-//		OSTimeDlyHMSM(0u, 0u, 0u, 200u,
-//                  OS_OPT_TIME_HMSM_STRICT,
-//                  &os_err);
-//	}
-//}
-
-
-
-/*
-*********************************************************************************************************
-*                                             AppTaskLed4()
-*
-* Description : This task finds the root of the following equation.
-*               f(x) = x^2 -3 using the bisection mehtod
-*
-* Argument(s) : p_arg   is the argument passed to 'AppTaskEq()' by 'OSTaskCreate()'.
-*
-* Return(s)   : none.
-*
-* Note(s)     : 1) Atollic TrueSTUDIO needs special settings to properly output floating point format;
-*                  however, IAR and KeilMDK should work properly.
-*********************************************************************************************************
-*/
-//static void AppTaskLed4(void)
-//{
-//	OS_ERR os_err;
-//	while(DEF_TRUE)
-//	{
-//		BSP_LED_Toggle(4u);
-//		OSTimeDlyHMSM(0u, 0u, 0u, 400u,
-//                  OS_OPT_TIME_HMSM_STRICT,
-//                  &os_err);
-//	}
-//}
 
 /*
 *********************************************************************************************************

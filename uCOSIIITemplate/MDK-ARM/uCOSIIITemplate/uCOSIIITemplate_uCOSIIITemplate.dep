@@ -58,7 +58,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h)(0x56D8FEEA
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x56D8FEEA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x56D8FEEA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x56D8FEEA)
-F (../Src/main.c)(0x56EFE196)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ..\Src\uC-CPU -I ..\Src\uC-CPU\ARM-Cortex-M4\RealView -I ..\Src\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\Src\uC-LIB -I ..\Src\uCOS-III\Source -I ..\Src\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\Src -I ..\Src\BSP -I ..\Src\BSP\OS\uCOS-III -I ..\Src\APPs --C99-I H:\Sources\STM32F407VGT_uCOSIIITemplate\uCOSIIITemplate\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ucosiiitemplate\main.o --omf_browse ucosiiitemplate\main.crf --depend ucosiiitemplate\main.d)
+F (../Src/main.c)(0x56EFE555)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ..\Src\uC-CPU -I ..\Src\uC-CPU\ARM-Cortex-M4\RealView -I ..\Src\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\Src\uC-LIB -I ..\Src\uCOS-III\Source -I ..\Src\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\Src -I ..\Src\BSP -I ..\Src\BSP\OS\uCOS-III -I ..\Src\APPs --C99-I H:\Sources\STM32F407VGT_uCOSIIITemplate\uCOSIIITemplate\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ucosiiitemplate\main.o --omf_browse ucosiiitemplate\main.crf --depend ucosiiitemplate\main.d)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h)(0x56D8FEEA)
 I (../Inc/stm32f4xx_hal_conf.h)(0x56E51391)
 I (../Inc/mxconstants.h)(0x56E51391)
@@ -106,7 +106,7 @@ I (..\Src\os_cfg.h)(0x56E21CBD)
 I (..\Src\uCOS-III\Source\os_type.h)(0x56DA8824)
 I (..\Src\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu.h)(0x56DA8823)
 I (..\Src\os_app_hooks.h)(0x56DA8821)
-I (..\Src\app_cfg.h)(0x56E51690)
+I (..\Src\app_cfg.h)(0x56EFE519)
 I (..\Src\BSP\bsp.h)(0x56DA8820)
 F (../Src/gpio.c)(0x56E51390)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ..\Src\uC-CPU -I ..\Src\uC-CPU\ARM-Cortex-M4\RealView -I ..\Src\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\Src\uC-LIB -I ..\Src\uCOS-III\Source -I ..\Src\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\Src -I ..\Src\BSP -I ..\Src\BSP\OS\uCOS-III -I ..\Src\APPs --C99-I H:\Sources\STM32F407VGT_uCOSIIITemplate\uCOSIIITemplate\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ucosiiitemplate\gpio.o --omf_browse ucosiiitemplate\gpio.crf --depend ucosiiitemplate\gpio.d)
 I (../Inc/gpio.h)(0x56E51390)
@@ -169,7 +169,7 @@ I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h)(0x56D8FEEA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h)(0x56D8FEEA)
 I (../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h)(0x56D8FEEA)
 I (../Inc/gpio.h)(0x56E51390)
-F (..\Src\app_cfg.h)(0x56E51690)()
+F (..\Src\app_cfg.h)(0x56EFE519)()
 F (..\Src\cpu_cfg.h)(0x56DA8821)()
 F (..\Src\lib_cfg.h)(0x56DA8821)()
 F (..\Src\os_app_hooks.c)(0x56DA8821)(-c --cpu Cortex-M4.fp -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Include -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ..\Src\uC-CPU -I ..\Src\uC-CPU\ARM-Cortex-M4\RealView -I ..\Src\uC-LIB\Ports\ARM-Cortex-M4\RealView -I ..\Src\uC-LIB -I ..\Src\uCOS-III\Source -I ..\Src\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView -I ..\Src -I ..\Src\BSP -I ..\Src\BSP\OS\uCOS-III -I ..\Src\APPs --C99-I H:\Sources\STM32F407VGT_uCOSIIITemplate\uCOSIIITemplate\MDK-ARM\RTE-I C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include-I C:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include-D__UVISION_VERSION="518" -D_RTE_ -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx-o ucosiiitemplate\os_app_hooks.o --omf_browse ucosiiitemplate\os_app_hooks.crf --depend ucosiiitemplate\os_app_hooks.d)
