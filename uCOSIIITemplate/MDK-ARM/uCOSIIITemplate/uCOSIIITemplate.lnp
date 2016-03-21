@@ -6,6 +6,7 @@
 "ucosiiitemplate\usart.o"
 "ucosiiitemplate\os_app_hooks.o"
 "ucosiiitemplate\spi.o"
+"ucosiiitemplate\bsp_lcd5110.o"
 "ucosiiitemplate\stm32f4xx_hal_flash.o"
 "ucosiiitemplate\stm32f4xx_hal_pwr.o"
 "ucosiiitemplate\stm32f4xx_hal_dma.o"
