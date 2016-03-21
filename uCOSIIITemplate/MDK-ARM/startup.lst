@@ -678,12 +678,12 @@ ARM Macro Assembler    Page 11
               E000EF34 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=ucosiiitemplate\startup.d -oucosiiitemplate\startup.o -IE:\STM3
-2F4Projekt\uCOSIIITemplate\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CM
-SIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device
-\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VE
-RSION SETA 518" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --l
-ist=startup.lst ..\Src\startup.s
+erwork --depend=ucosiiitemplate\startup.d -oucosiiitemplate\startup.o -IH:\Sour
+ces\STM32F407VGT_uCOSIIITemplate\uCOSIIITemplate\MDK-ARM\RTE -IC:\Keil_v5\ARM\P
+ACK\ARM\CMSIS\4.5.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.
+0\Drivers\CMSIS\Device\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1" --p
+redefine="__UVISION_VERSION SETA 518" --predefine="_RTE_ SETA 1" --predefine="S
+TM32F407xx SETA 1" --list=startup.lst ..\Src\startup.s
 
 
 

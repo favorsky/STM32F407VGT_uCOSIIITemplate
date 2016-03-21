@@ -459,12 +459,12 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 ARM Macro Assembler    Page 8 
 
 
-erwork --depend=ucosiiitemplate\cpu_a.d -oucosiiitemplate\cpu_a.o -IE:\STM32F4P
-rojekt\uCOSIIITemplate\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\CMSIS\
-Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Device\ST\
-STM32F4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_VERSIO
-N SETA 518" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" --list=
-cpu_a.lst ..\Src\uC-CPU\ARM-Cortex-M4\RealView\cpu_a.asm
+erwork --depend=ucosiiitemplate\cpu_a.d -oucosiiitemplate\cpu_a.o -IH:\Sources\
+STM32F407VGT_uCOSIIITemplate\uCOSIIITemplate\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\
+ARM\CMSIS\4.5.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Dr
+ivers\CMSIS\Device\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1" --prede
+fine="__UVISION_VERSION SETA 518" --predefine="_RTE_ SETA 1" --predefine="STM32
+F407xx SETA 1" --list=cpu_a.lst ..\Src\uC-CPU\ARM-Cortex-M4\RealView\cpu_a.asm
 
 
 

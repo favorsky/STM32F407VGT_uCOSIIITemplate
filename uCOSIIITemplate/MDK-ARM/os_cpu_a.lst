@@ -479,13 +479,13 @@ ARM Macro Assembler    Page 8
               00000000 
               E000ED04 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=ucosiiitemplate\os_cpu_a.d -oucosiiitemplate\os_cpu_a.o -IE:\ST
-M32F4Projekt\uCOSIIITemplate\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.0\
-CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\Devi
-ce\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISION_
-VERSION SETA 518" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1" -
--list=os_cpu_a.lst ..\Src\uCOS-III\Ports\ARM-Cortex-M4\Generic\RealView\os_cpu_
-a.asm
+erwork --depend=ucosiiitemplate\os_cpu_a.d -oucosiiitemplate\os_cpu_a.o -IH:\So
+urces\STM32F407VGT_uCOSIIITemplate\uCOSIIITemplate\MDK-ARM\RTE -IC:\Keil_v5\ARM
+\PACK\ARM\CMSIS\4.5.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.
+7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1" -
+-predefine="__UVISION_VERSION SETA 518" --predefine="_RTE_ SETA 1" --predefine=
+"STM32F407xx SETA 1" --list=os_cpu_a.lst ..\Src\uCOS-III\Ports\ARM-Cortex-M4\Ge
+neric\RealView\os_cpu_a.asm
 
 
 

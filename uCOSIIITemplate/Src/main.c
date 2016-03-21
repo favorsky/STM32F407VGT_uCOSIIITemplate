@@ -53,6 +53,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+
+
 /* Private variables ---------------------------------------------------------*/
 static  OS_TCB       AppTaskStartTCB;
 static  CPU_STK      AppTaskStartStk[APP_CFG_TASK_START_STK_SIZE];
@@ -84,6 +86,9 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 extern  CPU_INT32U  BSP_ButtonBlueRd(void);
+extern  void        BSP_USART_Putc(UART_HandleTypeDef* UARTx, uint8_t* str);
+
+
 
 static  void  AppTaskStart (void  *p_arg);
 static  void  AppTaskCreate(void);
@@ -283,47 +288,47 @@ static  void  AppTaskCreate (void)
                  (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
                  &os_err);
 	
-		OSTaskCreate(&AppTaskLed2TCB,                               /* Create Led2 task                                */
-                  "App Task Led2",
-                  (OS_TASK_PTR)AppTaskLed2,
-                  0u,
-                  APP_CFG_TASK_LED2_PRIO,
-                 &AppTaskLed2Stk[0u],
-                  AppTaskLed2Stk[APP_CFG_TASK_LED2_STK_SIZE / 10u],
-                  APP_CFG_TASK_LED2_STK_SIZE,
-                  0u,
-                  0u,
-                  0u,
-                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
-                 &os_err);
-								 
-	  OSTaskCreate(&AppTaskLed3TCB,                               /* Create Led3 task                                */
-                  "App Task Led3",
-                  (OS_TASK_PTR)AppTaskLed3,
-                  0u,
-                  APP_CFG_TASK_LED3_PRIO,
-                 &AppTaskLed3Stk[0u],
-                  AppTaskLed3Stk[APP_CFG_TASK_LED3_STK_SIZE / 10u],
-                  APP_CFG_TASK_LED3_STK_SIZE,
-                  0u,
-                  0u,
-                  0u,
-                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
-                 &os_err);
-								 
-	  OSTaskCreate(&AppTaskLed4TCB,                               /* Create Led3 task                                */
-                  "App Task Led4",
-                  (OS_TASK_PTR)AppTaskLed4,
-                  0u,
-                  APP_CFG_TASK_LED4_PRIO,
-                 &AppTaskLed4Stk[0u],
-                  AppTaskLed4Stk[APP_CFG_TASK_LED4_STK_SIZE / 10u],
-                  APP_CFG_TASK_LED4_STK_SIZE,
-                  0u,
-                  0u,
-                  0u,
-                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
-                 &os_err);
+//		OSTaskCreate(&AppTaskLed2TCB,                               /* Create Led2 task                                */
+//                  "App Task Led2",
+//                  (OS_TASK_PTR)AppTaskLed2,
+//                  0u,
+//                  APP_CFG_TASK_LED2_PRIO,
+//                 &AppTaskLed2Stk[0u],
+//                  AppTaskLed2Stk[APP_CFG_TASK_LED2_STK_SIZE / 10u],
+//                  APP_CFG_TASK_LED2_STK_SIZE,
+//                  0u,
+//                  0u,
+//                  0u,
+//                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+//                 &os_err);
+//								 
+//	  OSTaskCreate(&AppTaskLed3TCB,                               /* Create Led3 task                                */
+//                  "App Task Led3",
+//                  (OS_TASK_PTR)AppTaskLed3,
+//                  0u,
+//                  APP_CFG_TASK_LED3_PRIO,
+//                 &AppTaskLed3Stk[0u],
+//                  AppTaskLed3Stk[APP_CFG_TASK_LED3_STK_SIZE / 10u],
+//                  APP_CFG_TASK_LED3_STK_SIZE,
+//                  0u,
+//                  0u,
+//                  0u,
+//                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+//                 &os_err);
+//								 
+//	  OSTaskCreate(&AppTaskLed4TCB,                               /* Create Led3 task                                */
+//                  "App Task Led4",
+//                  (OS_TASK_PTR)AppTaskLed4,
+//                  0u,
+//                  APP_CFG_TASK_LED4_PRIO,
+//                 &AppTaskLed4Stk[0u],
+//                  AppTaskLed4Stk[APP_CFG_TASK_LED4_STK_SIZE / 10u],
+//                  APP_CFG_TASK_LED4_STK_SIZE,
+//                  0u,
+//                  0u,
+//                  0u,
+//                 (OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+//                 &os_err);
 								 
 		OSTaskCreate(&AppTaskUARTTCB,
 								 "App Task UART",
@@ -403,13 +408,13 @@ static void AppTaskLed1(void)
 	while(DEF_TRUE)
 	{
 		BSP_LED_Toggle(1u);
-//		OSTimeDlyHMSM(0u, 0u, 0u, 50u,
-//                  OS_OPT_TIME_HMSM_STRICT,
-//                  &os_err);
-		OSTaskSemPend(0,
-									OS_OPT_PEND_BLOCKING,
-									&ts,
-									&os_err);
+		OSTimeDlyHMSM(0u, 0u, 0u, 50u,
+                  OS_OPT_TIME_HMSM_STRICT,
+                  &os_err);
+//		OSTaskSemPend(0,
+//									OS_OPT_PEND_BLOCKING,
+//									&ts,
+//									&os_err);
 	}
 }
 
@@ -428,17 +433,17 @@ static void AppTaskLed1(void)
 * Note(s)     : none.
 *********************************************************************************************************
 */
-static void AppTaskLed2(void)
-{
-	OS_ERR os_err;
-	while(DEF_TRUE)
-	{
-		BSP_LED_Toggle(2u);
-		OSTimeDlyHMSM(0u, 0u, 0u, 100u,
-                  OS_OPT_TIME_HMSM_STRICT,
-                  &os_err);
-	}
-}
+//static void AppTaskLed2(void)
+//{
+//	OS_ERR os_err;
+//	while(DEF_TRUE)
+//	{
+//		BSP_LED_Toggle(2u);
+//		OSTimeDlyHMSM(0u, 0u, 0u, 100u,
+//                  OS_OPT_TIME_HMSM_STRICT,
+//                  &os_err);
+//	}
+//}
 
 
 /*
@@ -456,17 +461,17 @@ static void AppTaskLed2(void)
 *                  IAR and KeilMDK should work properly.
 *********************************************************************************************************
 */
-static void AppTaskLed3(void)
-{
-	OS_ERR os_err;
-	while(DEF_TRUE)
-	{
-		BSP_LED_Toggle(3u);
-		OSTimeDlyHMSM(0u, 0u, 0u, 200u,
-                  OS_OPT_TIME_HMSM_STRICT,
-                  &os_err);
-	}
-}
+//static void AppTaskLed3(void)
+//{
+//	OS_ERR os_err;
+//	while(DEF_TRUE)
+//	{
+//		BSP_LED_Toggle(3u);
+//		OSTimeDlyHMSM(0u, 0u, 0u, 200u,
+//                  OS_OPT_TIME_HMSM_STRICT,
+//                  &os_err);
+//	}
+//}
 
 
 
@@ -485,17 +490,17 @@ static void AppTaskLed3(void)
 *                  however, IAR and KeilMDK should work properly.
 *********************************************************************************************************
 */
-static void AppTaskLed4(void)
-{
-	OS_ERR os_err;
-	while(DEF_TRUE)
-	{
-		BSP_LED_Toggle(4u);
-		OSTimeDlyHMSM(0u, 0u, 0u, 400u,
-                  OS_OPT_TIME_HMSM_STRICT,
-                  &os_err);
-	}
-}
+//static void AppTaskLed4(void)
+//{
+//	OS_ERR os_err;
+//	while(DEF_TRUE)
+//	{
+//		BSP_LED_Toggle(4u);
+//		OSTimeDlyHMSM(0u, 0u, 0u, 400u,
+//                  OS_OPT_TIME_HMSM_STRICT,
+//                  &os_err);
+//	}
+//}
 
 /*
 *********************************************************************************************************
@@ -515,10 +520,11 @@ static void AppTaskUARTSend(void * p_arg)
 {
 	OS_ERR err;
 	p_arg = p_arg;
-  CPU_INT08U tx = 0xaa;
+  CPU_INT08U tx[] = "abcde";
 	while(DEF_TRUE)
 	{
-	HAL_UART_Transmit_IT(&huart3,"abcde",5);
+	
+	BSP_USART_Putc(&huart3,tx);
 		
 	OSTimeDlyHMSM(0u,0u,0u,500u,
 								OS_OPT_TIME_HMSM_STRICT,

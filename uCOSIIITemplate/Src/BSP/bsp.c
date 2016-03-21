@@ -55,6 +55,7 @@
 *********************************************************************************************************
 */
 extern void MX_USART3_UART_Init(void);
+extern void MX_GPIO_Init(void);
 
 /*
 *********************************************************************************************************
@@ -213,6 +214,7 @@ void  BSP_Init (void)
 
     BSP_LED_Init();                                             /* Init LEDs.                                           */
     MX_USART3_UART_Init();
+		MX_GPIO_Init();
 		
 #ifdef TRACE_EN                                                 /* See project / compiler preprocessor options.         */
     BSP_CPU_REG_DBGMCU_CR |=  BSP_DBGMCU_CR_TRACE_IOEN_MASK;    /* Enable tracing (see Note #2).                        */

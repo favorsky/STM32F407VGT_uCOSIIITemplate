@@ -444,12 +444,13 @@ ARM Macro Assembler    Page 7
   310 00000220         
   311 00000220                 END
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=ucosiiitemplate\lib_mem_a.d -oucosiiitemplate\lib_mem_a.o -IE:\
-STM32F4Projekt\uCOSIIITemplate\MDK-ARM\RTE -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\4.5.
-0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\2.7.0\Drivers\CMSIS\De
-vice\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1" --predefine="__UVISIO
-N_VERSION SETA 518" --predefine="_RTE_ SETA 1" --predefine="STM32F407xx SETA 1"
- --list=lib_mem_a.lst ..\Src\uC-LIB\Ports\ARM-Cortex-M4\RealView\lib_mem_a.asm
+erwork --depend=ucosiiitemplate\lib_mem_a.d -oucosiiitemplate\lib_mem_a.o -IH:\
+Sources\STM32F407VGT_uCOSIIITemplate\uCOSIIITemplate\MDK-ARM\RTE -IC:\Keil_v5\A
+RM\PACK\ARM\CMSIS\4.5.0\CMSIS\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F4xx_DFP\
+2.7.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include --predefine="__MICROLIB SETA 1"
+ --predefine="__UVISION_VERSION SETA 518" --predefine="_RTE_ SETA 1" --predefin
+e="STM32F407xx SETA 1" --list=lib_mem_a.lst ..\Src\uC-LIB\Ports\ARM-Cortex-M4\R
+ealView\lib_mem_a.asm
 
 
 
